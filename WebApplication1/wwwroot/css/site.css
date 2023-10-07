@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--black-variation-5, #1F1F1F);
+    color: #ffffff;
 }
 
 .navbar {
