@@ -1,4 +1,4 @@
-
+﻿
 function increase() {
     var increases = document.querySelectorAll(".counter");
 
@@ -95,3 +95,17 @@ function loginUser(user) {
 
 document.getElementById('loginForm').addEventListener('submit', handleLoginFormSubmit);
 document.getElementById('registerForm').addEventListener('submit', handleRegisterFormSubmit);
+
+
+
+const disabledDates = ['2023-10-10', '2023-10-15'];
+
+const dateInput = document.getElementById('dateInput');
+
+dateInput.addEventListener('input', function() {
+    const selectedDate = this.value;
+    if (disabledDates.includes(selectedDate)) {
+        alert('This date is full');
+        this.value = '';  
+    }
+});
