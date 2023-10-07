@@ -36,16 +36,21 @@ function handleRegisterFormSubmit(event) {
 }
 
 
-function handleLoginFormSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const user = {
-        username: formData.get('username'),
-        password: formData.get('password')
-    };
-    loginUser(user);
-    console.log('Login form submitted.');
-}
+let isLoggedIn = false;  
+
+    function handleLoginFormSubmit(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const user = {
+            username: formData.get('username'),
+            password: formData.get('password')
+        };
+        
+        isLoggedIn = true;
+        console.log('Login successful.');
+        
+        document.getElementById('buyButton').disabled = false;
+    }
 
 
 function registerUser(user) {
@@ -60,7 +65,7 @@ function registerUser(user) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.text();  // Change this to response.text() to get the raw response
+            return response.text();  
         })
         .then(data => {
             console.log('Registration response:', data);
@@ -83,15 +88,17 @@ function loginUser(user) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.text();
+            return response.json();
         })
         .then(data => {
             console.log('Login successful:', data);
+            
         })
         .catch(error => {
             console.error('Error during login:', error);
         });
 }
+
 
 document.getElementById('loginForm').addEventListener('submit', handleLoginFormSubmit);
 document.getElementById('registerForm').addEventListener('submit', handleRegisterFormSubmit);
@@ -101,32 +108,33 @@ document.getElementById('registerForm').addEventListener('submit', handleRegiste
 
 
 const disabledDates = ['2023-10-10', '2023-10-15'];
-        const purchasedDates = [];  // Dates that have been "bought" by customers
+        const purchasedDates = [];  
 
         const dateInput = document.getElementById('dateInput');
         const buyButton = document.getElementById('buyButton');
 
-        dateInput.addEventListener('input', function() {
+        function isUserLoggedIn() {
+            
+            
+            return true;  
+        }
+
+        dateInput.addEventListener('input', function () {
             const selectedDate = this.value;
-            if (disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate)) {
-                alert('This date is not available for selection.');
-                this.value = '';  // Reset the value if the date is disabled or purchased
-            }
+            buyButton.disabled = !isLoggedIn || !selectedDate || disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate);
         });
-
-        buyButton.addEventListener('click', function() {
+    
+        buyButton.addEventListener('click', function () {
             const selectedDate = dateInput.value;
-
-            if (selectedDate && !disabledDates.includes(selectedDate) && !purchasedDates.includes(selectedDate)) {
-                // Save the selected date to the list of purchased dates
-                purchasedDates.push(selectedDate);
+    
+            if (isLoggedIn) {
+                
                 alert('Date purchased: ' + selectedDate);
-                dateInput.value = ''; // Reset the date input
-            } else if (disabledDates.includes(selectedDate)) {
-                alert('This date is disabled and cannot be selected.');
-            } else if (purchasedDates.includes(selectedDate)) {
-                alert('This date has already been purchased.');
+                
+                purchasedDates.push(selectedDate);
+                dateInput.value = ''; 
+                buyButton.disabled = true; 
             } else {
-                alert('Please select a valid date.');
+                alert('You need to be logged in to buy dates.');
             }
         });
