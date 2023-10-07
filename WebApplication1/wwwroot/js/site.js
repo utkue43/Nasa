@@ -99,6 +99,40 @@ function loginUser(user) {
         });
 }
 
+let loggedInUser = null;  // Assume no user is initially logged in
+
+function loginUser(user) {
+    // Simulated login logic - set a user object with a "nickname"
+    loggedInUser = { nickname: user.username };  // Assuming the username is used as the nickname
+    // Update the UI to show the welcome message
+    updateWelcomeMessage();
+}
+
+function updateWelcomeMessage() {
+    const welcomeMessage = document.getElementById('welcomeMessage');
+
+    if (loggedInUser) {
+        welcomeMessage.textContent = `Welcome, ${loggedInUser.nickname}!`;
+        welcomeMessage.style.display = 'block';  // Show the welcome message
+    } else {
+        welcomeMessage.textContent = '';  // Clear the welcome message
+        welcomeMessage.style.display = 'none';  // Hide the welcome message
+    }
+}
+
+document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const user = {
+        username: formData.get('username'),
+        password: formData.get('password')
+    };
+    loginUser(user);
+    console.log('Login form submitted.');
+});
+
+
+
 
 document.getElementById('loginForm').addEventListener('submit', handleLoginFormSubmit);
 document.getElementById('registerForm').addEventListener('submit', handleRegisterFormSubmit);
