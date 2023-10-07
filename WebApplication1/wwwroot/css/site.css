@@ -40,3 +40,13 @@ body {
     background-color: rgba(8, 45, 108, 1);
     color: #ffffff;
 }
+.newsRow{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+   
+    align-self: stretch;
+    
+}
+
