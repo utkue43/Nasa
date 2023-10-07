@@ -123,6 +123,16 @@ const disabledDates = ['2023-10-10', '2023-10-15'];
             const selectedDate = this.value;
             buyButton.disabled = !isLoggedIn || !selectedDate || disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate);
         });
+
+        function updatePurchasedDatesDisplay() {
+            purchasedDatesList.innerHTML = '';  
+    
+            purchasedDates.forEach(date => {
+                const listItem = document.createElement('li');
+                listItem.textContent = date;
+                purchasedDatesList.appendChild(listItem);
+            });
+        }
     
         buyButton.addEventListener('click', function () {
             const selectedDate = dateInput.value;
@@ -134,7 +144,8 @@ const disabledDates = ['2023-10-10', '2023-10-15'];
                 purchasedDates.push(selectedDate);
                 dateInput.value = ''; 
                 buyButton.disabled = true; 
+                updatePurchasedDatesDisplay();  
             } else {
                 alert('You need to be logged in to buy dates.');
             }
-        });
+        });                                                                                     
