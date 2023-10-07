@@ -1,10 +1,10 @@
-body{
+body {
     font-family: 'Roboto Mono', monospace;
+    background-color: var(--black-variation-5, #1F1F1F);
 }
 
-nav {
+.navbar {
     background-color: #0A0A0A;
-
 }
 
 .container {
@@ -21,14 +21,25 @@ nav {
     letter-spacing: 0.08px;
 }
 
-.nav-link{
+.nav-link {
     color: rgba(255, 255, 255, 0.8);
 }
-.navbar-expand-lg .navbar-collapse{
-    flex-basis: auto;
+
+.navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
 }
 
+.sign-in {
+    padding: 12px 16px;
+    border-radius: 5px;
+    background: var(--brand-colours-blue, #0B3D91);
+    color: #ffffff;
+}
+
+.sign-in:hover {
+    background-color: rgba(8, 45, 108, 1);
+    color: #ffffff;
+}
 .newsRow{
     display: flex;
    
