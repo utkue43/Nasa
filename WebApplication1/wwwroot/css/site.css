@@ -1,18 +1,30 @@
-html {
-  font-size: 14px;
+body{
+    font-family: 'Roboto Mono', monospace;
 }
 
-@media (min-width: 768px) {
-  html {
+nav {
+    background-color: #0A0A0A;
+
+}
+
+.container {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+
+.nav-item {
     font-size: 16px;
-  }
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.08px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.nav-link{
+    color: rgba(255, 255, 255, 0.8);
 }
-
-body {
-  margin-bottom: 60px;
+.navbar-expand-lg .navbar-collapse{
+    flex-basis: auto;
+    justify-content: flex-end;
 }
