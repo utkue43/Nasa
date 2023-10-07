@@ -41,13 +41,16 @@ body {
     background-color: rgba(8, 45, 108, 1);
     color: #ffffff;
 }
-.newsRow{
-    display: flex;
-   
-    justify-content: center;
+
+.card {
+
     align-items: center;
-   
-    align-self: stretch;
-    
+    width: Fixed (282px);
+    padding: 12px;
+    border-radius: 10px;
+    gap: 15px;
+    color: #ffffff;
+    background-color:  #1E5EC9;
+
 }
 
