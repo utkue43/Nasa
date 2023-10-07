@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--black-variation-5, #1F1F1F);
     color: #ffffff;
+    font-weight: 500;
 }
 
 .navbar {
@@ -9,8 +10,8 @@ body {
 }
 
 .container {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 120px ;
+    margin-right: 120px ;
 }
 
 
@@ -26,6 +27,10 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.nav-link:hover {
+    color: #ffffff;
+}
+
 .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
 }
@@ -35,6 +40,7 @@ body {
     border-radius: 5px;
     background: var(--brand-colours-blue, #0B3D91);
     color: #ffffff;
+    font-size: 16px;
 }
 
 .sign-in:hover {
@@ -42,6 +48,11 @@ body {
     color: #ffffff;
 }
 
+/*--------------------------------------*/
+.news-container{
+    width: auto;
+    margin: 72px 132px 72px;
+}
 .card {
 
     align-items: center;
@@ -65,4 +76,37 @@ body {
 .planetInfoContainer{
     margin-top: 40px;
     margin-bottom: 40px;
+}
+.news-row {
+    padding: 24px 12px;
+    border-radius: 10px;
+    background: #1B1B1B;
+    box-shadow: 0px 8px 20px 0px rgba(89, 89, 89, 0.25), 0px -8px 20px 0px rgba(89, 89, 89, 0.25);
+}
+
+.news-col-1{
+    padding-right: 10%;
+}
+
+.news-header {
+    font-size: 48px;
+}
+
+.news-text {
+    font-size: 24px;
+}
+
+.news-button {
+    letter-spacing: 0.064px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 18px 32px;
+    gap: 8px;
+    border-radius: 5px;
+    background: var(--blue-variation-main, #0B3D91);
+}
+.news-button:hover{
+    color: #ffffff;
+    background-color: #082D6C;
 }
