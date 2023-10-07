@@ -1,3 +1,30 @@
-h1{
-    color:red;
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav {
+    background-color: #0A0A0A;
+
+}
+
+.container {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+
+.nav-item {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.08px;
+}
+
+.nav-link{
+    color: rgba(255, 255, 255, 0.8);
+}
+.navbar-expand-lg .navbar-collapse{
+    flex-basis: auto;
+    justify-content: flex-end;
 }
