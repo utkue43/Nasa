@@ -4,14 +4,60 @@
     ViewData["Title"] = "Home page";
 }
 
+
+<div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="#"><img src="Nasa logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex ">
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <button class="btn ms-4">Contact us</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    
+
+</div>
+
+
  <div class="form-container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
-            <button type="submit">Login</button>
-        </form>
-    </div>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</div>
 
     <div class="form-container">
         <h2>Register</h2>
@@ -21,4 +67,31 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
+
+
+
+
+
+    
+
+<div class="purchase-container">
+    <h2>Purchase</h2>
+    <input type="date" id="dateInput">
+    <button id="buyButton" disabled>Buy</button>
+</div>
+
+<div class="purchased-dates-container">
+    <h2>Your Purchased Dates</h2>
+    <ul id="purchasedDatesList"></ul>
+</div>
+
+<div id="welcomeMessage" style="display: none;"></div>
+
+
+ 
+
+
+
+
 

@@ -30,7 +30,6 @@ namespace WebApplication1.Controller
             if (user == null)
                 return BadRequest("Invalid user data.");
 
-           
             var existingUser = users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
 
             if (existingUser == null)
