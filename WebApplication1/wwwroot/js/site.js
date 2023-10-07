@@ -23,6 +23,7 @@ window.addEventListener("scroll", increase);
 
 function registerUser() {
     
+    var aga = document.getElementById("tek").innerHTML()
 
     fetch('https://localhost:7076/api/User/register', {
         method: 'POST',
