@@ -21,10 +21,34 @@ function increase() {
 
 window.addEventListener("scroll", increase);
 
-function registerUser() {
-    
-    var aga = document.getElementById("tek").innerHTML()
 
+
+
+function handleRegisterFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const user = {
+        username: formData.get('username'),
+        password: formData.get('password')
+    };
+    registerUser(user);
+    console.log('Register form submitted.');
+}
+
+
+function handleLoginFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const user = {
+        username: formData.get('username'),
+        password: formData.get('password')
+    };
+    loginUser(user);
+    console.log('Login form submitted.');
+}
+
+
+function registerUser(user) {
     fetch('https://localhost:7076/api/User/register', {
         method: 'POST',
         headers: {
@@ -36,10 +60,10 @@ function registerUser() {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json();
+            return response.text();  // Change this to response.text() to get the raw response
         })
         .then(data => {
-            console.log('Registration successful:', data);
+            console.log('Registration response:', data);
         })
         .catch(error => {
             console.error('Error during registration:', error);
@@ -47,10 +71,8 @@ function registerUser() {
 }
 
 
-function loginUser() {
-    
-
-    fetch('https://localhost:7076/api/User/login', {
+function loginUser(user) {
+    fetch('https://localhost:7076/api/User/Login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -61,7 +83,7 @@ function loginUser() {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json();
+            return response.text();
         })
         .then(data => {
             console.log('Login successful:', data);
@@ -71,3 +93,5 @@ function loginUser() {
         });
 }
 
+document.getElementById('loginForm').addEventListener('submit', handleLoginFormSubmit);
+document.getElementById('registerForm').addEventListener('submit', handleRegisterFormSubmit);
