@@ -110,3 +110,8 @@ body {
     color: #ffffff;
     background-color: #082D6C;
 }
+
+.customerCard{
+    background-color: var(--blue-variation-main, #0B3D91);
+    padding : 30px;
+}
