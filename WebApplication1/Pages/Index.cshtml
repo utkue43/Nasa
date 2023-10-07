@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-  ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page";
 }
 
 
@@ -9,9 +9,8 @@
     <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
             <a href="#"><img src="Nasa logo.png" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,83 +39,103 @@
         </div>
     </nav>
 
-<div class="container">
-    <div class="row newsRow">
-      <div class="col-6">
-        <h1> Historic Mission to Mars </h1>
-        <p> A multinational crew embarks on a groundbreaking journey to Mars, marking a new era in space exploration.
-        </p>
-        <button>Learn More</button>
-      </div>
-      <div class="col-6">
-        <img src="News.png" alt="News">
-      </div>
+    <div class="container news-container">
+        <div class="row news-row">
+            <div class="col-6 news-col-1">
+                <h2 class="news-header"> Historic Mission to Mars </h2>
+                <p class="news-text"> A multinational crew embarks on a groundbreaking journey to Mars, marking a new
+                    era in space
+                    exploration.
+                </p>
+                <button class="btn news-button">Learn More</button>
+            </div>
+            <div class="col-6 text-end">
+                <img class="mw-100 h-auto" src="News.png" alt="News">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">Features</div>
+
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        This is some text within a card body.
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+
+
+
+
+
+
 
     </div>
-  </div>
 
-
-  <div class="continer">
-    <div class="row">
-      <div class="col-12">Features</div>
-
-      <div class="col-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="" alt="">
-          </div>
-        </div>
-      </div>
-     
-       <div class="col-3">
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </div>
-
-        <div class="col-3">
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </div>
-
-        <div class="col-3">
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-</div>
-
-
-<div class="form-container">
-    <h2>Login</h2>
-    <form id="loginForm">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
-    </form>
-</div>
-
-<div class="form-container">
-    <h2>Register</h2>
-    <form id="registerForm">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Register</button>
-    </form>
-</div>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Register</button>
+        </form>
+    </div>
 
 
 
@@ -125,33 +144,15 @@
 
 
 
-</div>
+    <div class="purchase-container">
+        <h2>Purchase</h2>
+        <input type="date" id="dateInput">
+        <button id="buyButton" disabled>Buy</button>
+    </div>
 
-<div class="form-container">
-  <h2>Register</h2>
-  <form id="registerForm">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <button type="submit">Register</button>
-  </form>
-</div>
+    <div class="purchased-dates-container">
+        <h2>Your Purchased Dates</h2>
+        <ul id="purchasedDatesList"></ul>
+    </div>
 
-
-
-
-
-
-
-
-<div class="purchase-container">
-  <h2>Purchase</h2>
-  <input type="date" id="dateInput">
-  <button id="buyButton" disabled>Buy</button>
-</div>
-
-<div class="purchased-dates-container">
-  <h2>Your Purchased Dates</h2>
-  <ul id="purchasedDatesList"></ul>
-</div>
-
-<div id="welcomeMessage" style="display: none;"></div>
+    <div id="welcomeMessage" style="display: none;"></div>
