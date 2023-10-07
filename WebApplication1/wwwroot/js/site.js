@@ -38,19 +38,46 @@ function handleRegisterFormSubmit(event) {
 
 let isLoggedIn = false;  
 
-    function handleLoginFormSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const user = {
-            username: formData.get('username'),
-            password: formData.get('password')
-        };
-        
-        isLoggedIn = true;
-        console.log('Login successful.');
-        
-        document.getElementById('buyButton').disabled = false;
-    }
+function handleLoginFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const user = {
+        username: formData.get('username'),
+        password: formData.get('password')
+    };
+
+    
+    fetch('https://localhost:7076/api/User/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error('User is not registered.');
+                } else if (response.status === 400) {
+                    throw new Error('Invalid password.');
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Login successful:', data);
+            isLoggedIn = true;
+            document.getElementById('buyButton').disabled = false;
+            updateWelcomeMessage();
+        })
+        .catch(error => {
+            console.error('Error during login:', error.message);
+            alert(error.message); 
+        });
+}
+
 
 
 function registerUser(user) {
@@ -88,23 +115,25 @@ function loginUser(user) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.json();
+            return response.json();  // Parse response as JSON
         })
         .then(data => {
-            console.log('Login successful:', data);
-            
+            console.log('Login successful:', data.message);
+            // Assuming data contains the user information
+            console.log('User:', data.user);
         })
         .catch(error => {
             console.error('Error during login:', error);
         });
 }
 
-let loggedInUser = null;  // Assume no user is initially logged in
+
+let loggedInUser = null;  
 
 function loginUser(user) {
-    // Simulated login logic - set a user object with a "nickname"
-    loggedInUser = { nickname: user.username };  // Assuming the username is used as the nickname
-    // Update the UI to show the welcome message
+    
+    loggedInUser = { nickname: user.username }; 
+    
     updateWelcomeMessage();
 }
 
@@ -113,10 +142,10 @@ function updateWelcomeMessage() {
 
     if (loggedInUser) {
         welcomeMessage.textContent = `Welcome, ${loggedInUser.nickname}!`;
-        welcomeMessage.style.display = 'block';  // Show the welcome message
+        welcomeMessage.style.display = 'block';  
     } else {
-        welcomeMessage.textContent = '';  // Clear the welcome message
-        welcomeMessage.style.display = 'none';  // Hide the welcome message
+        welcomeMessage.textContent = '';  
+        welcomeMessage.style.display = 'none';  
     }
 }
 
