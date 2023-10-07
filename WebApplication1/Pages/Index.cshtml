@@ -6,40 +6,41 @@
 
 
 <div>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a href="#"><img src="Nasa logo.png" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav d-flex ">
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Explore</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Destinations</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Customers</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <button class="btn ms-4">Contact us</button>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container">
+            <a href="#"><img src="Nasa logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <button class="btn ms-4 sign-in">Sign in</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="container">
+<div class="container">
     <div class="row newsRow">
       <div class="col-6">
         <h1> Historic Mission to Mars </h1>
@@ -55,6 +56,43 @@
   </div>
 
 
+  <div class="continer">
+    <div class="row">
+      <div class="col-12">Features</div>
+
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+     
+       <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            This is some text within a card body.
+          </div>
+        </div>
+      </div>
+
+        <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            This is some text within a card body.
+          </div>
+        </div>
+      </div>
+
+        <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            This is some text within a card body.
+          </div>
+        </div>
+      </div>
+
+
 
 
 
@@ -63,12 +101,30 @@
 
 
 <div class="form-container">
-  <h2>Login</h2>
-  <form id="loginForm">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <button type="submit">Login</button>
-  </form>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div class="form-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
 </div>
 
 <div class="form-container">
@@ -88,22 +144,14 @@
 
 
 <div class="purchase-container">
-    <h2>Purchase</h2>
-    <input type="date" id="dateInput">
-    <button id="buyButton" disabled>Buy</button>
+  <h2>Purchase</h2>
+  <input type="date" id="dateInput">
+  <button id="buyButton" disabled>Buy</button>
 </div>
 
 <div class="purchased-dates-container">
-    <h2>Your Purchased Dates</h2>
-    <ul id="purchasedDatesList"></ul>
+  <h2>Your Purchased Dates</h2>
+  <ul id="purchasedDatesList"></ul>
 </div>
 
 <div id="welcomeMessage" style="display: none;"></div>
-
-
- 
-
-
-
-
-
