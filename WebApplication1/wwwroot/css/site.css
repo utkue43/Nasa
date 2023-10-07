@@ -28,3 +28,14 @@ nav {
     flex-basis: auto;
     justify-content: flex-end;
 }
+
+.newsRow{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+   
+    align-self: stretch;
+    
+}
+
