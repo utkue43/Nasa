@@ -52,6 +52,16 @@ body {
 .news-container{
     width: auto;
     margin: 72px 132px 72px;
+}
+.card {
+
+    align-items: center;
+    width: Fixed (282px);
+    padding: 12px;
+    border-radius: 10px;
+    gap: 15px;
+    color: #ffffff;
+    background-color:  #1E5EC9;
 
 }
 
