@@ -61,10 +61,22 @@ body {
     border-radius: 10px;
     gap: 15px;
     color: #ffffff;
-    background-color:  #1E5EC9;
+    background-color: #1E5EC9;
 
 }
 
+.destinationHeader {
+    margin-top: 40px;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.planetInfoContainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 .news-row {
     padding: 24px 12px;
     border-radius: 10px;
