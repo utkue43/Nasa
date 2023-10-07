@@ -57,7 +57,7 @@ body {
 .card {
 
     align-items: center;
-    height: auto;
+    height: 470px;
     padding: 12px;
     border-radius: 10px;
     color: #ffffff;
@@ -67,9 +67,7 @@ body {
 
 .destinationHeader {
     margin-top: 40px;
-
     margin-bottom: 40px;
-
     text-align: center;
 }
 
