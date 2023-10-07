@@ -98,14 +98,35 @@ document.getElementById('registerForm').addEventListener('submit', handleRegiste
 
 
 
+
+
 const disabledDates = ['2023-10-10', '2023-10-15'];
+        const purchasedDates = [];  // Dates that have been "bought" by customers
 
-const dateInput = document.getElementById('dateInput');
+        const dateInput = document.getElementById('dateInput');
+        const buyButton = document.getElementById('buyButton');
 
-dateInput.addEventListener('input', function() {
-    const selectedDate = this.value;
-    if (disabledDates.includes(selectedDate)) {
-        alert('This date is full');
-        this.value = '';  
-    }
-});
+        dateInput.addEventListener('input', function() {
+            const selectedDate = this.value;
+            if (disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate)) {
+                alert('This date is not available for selection.');
+                this.value = '';  // Reset the value if the date is disabled or purchased
+            }
+        });
+
+        buyButton.addEventListener('click', function() {
+            const selectedDate = dateInput.value;
+
+            if (selectedDate && !disabledDates.includes(selectedDate) && !purchasedDates.includes(selectedDate)) {
+                // Save the selected date to the list of purchased dates
+                purchasedDates.push(selectedDate);
+                alert('Date purchased: ' + selectedDate);
+                dateInput.value = ''; // Reset the date input
+            } else if (disabledDates.includes(selectedDate)) {
+                alert('This date is disabled and cannot be selected.');
+            } else if (purchasedDates.includes(selectedDate)) {
+                alert('This date has already been purchased.');
+            } else {
+                alert('Please select a valid date.');
+            }
+        });
