@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-﻿function increase() {
+
+function increase() {
     var increases = document.querySelectorAll(".counter");
 
     for (var i = 0; i < increases.length; i++) {
@@ -20,8 +20,8 @@
 }
 
 window.addEventListener("scroll", increase);
-=======
-﻿function registerUser() {
+
+function registerUser() {
     
 
     fetch('https://localhost:7076/api/User/register', {
@@ -70,22 +70,3 @@ function loginUser() {
         });
 }
 
-
-function incrementValue() {
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number').value = value;
-    
-    
-    localStorage.setItem('incrementedValue', value);
-}
-
-window.onload = function () {
-    var savedValue = localStorage.getItem('incrementedValue');
-    if (savedValue !== null) {
-        document.getElementById('number').value = savedValue;
-    }
-}
-
->>>>>>> 82c160d86addd7f391535a7f147b2f8aebd597bc
