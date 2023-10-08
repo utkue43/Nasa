@@ -3,6 +3,7 @@ body {
     background-color: var(--black-variation-5, #1F1F1F);
     color: #ffffff;
     font-weight: 500;
+    font-size: 16px;
 }
 
 
@@ -17,7 +18,7 @@ body {
 
 
 .nav-item {
-    font-size: 16px;
+    
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -41,7 +42,7 @@ body {
     border-radius: 5px;
     background: var(--brand-colours-blue, #0B3D91);
     color: #ffffff;
-    font-size: 16px;
+   
 }
 
 .sign-in:hover {
@@ -63,8 +64,12 @@ body {
     border-radius: 10px;
     color: #ffffff;
     background-color: #1E5EC9;
-
 }
+
+.col-4 .card{
+    height: auto;
+}
+
 
 .destinationHeader {
     margin-top: 40px;
@@ -99,7 +104,7 @@ body {
 
 .news-button {
     letter-spacing: 0.064px;
-    font-size: 16px;
+   
     font-weight: 700;
     color: #ffffff;
     padding: 18px 32px;
@@ -114,8 +119,8 @@ body {
 }
 
 .customerCard {
-    background-color: var(--blue-variation-main, #0B3D91);
-    padding: 30px;
+    border-radius: 10px;
+    background: var(--blue-variation-5, #052E73);
 }
 
 /*--------------------------------------*/
@@ -147,7 +152,7 @@ hr {
 .features-text {
     color: rgba(255, 255, 255, 0.70);
     letter-spacing: 0.08px;
-    font-size: 16px;
+   
 }
 
 
@@ -162,4 +167,21 @@ h3 {
 .destinations-text {
     letter-spacing: 0.024px;
 
+}
+
+
+/*--------------------------------------*/
+
+h5{
+    font-size: 20px;
+    margin-top: 64px;
+}
+h6{
+    margin: 18px auto;
+    letter-spacing: 0.08px;
+}
+
+.customer-image{
+    position: absolute;
+    top: -65px;
 }
