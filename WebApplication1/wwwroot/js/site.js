@@ -212,3 +212,33 @@ const disabledDates = ['2023-10-10', '2023-10-15'];
                 alert('You need to be logged in to buy dates.');
             }
         });                                                                                     
+
+        function disableSelectedLocation(locationType) {
+            const currentLocationSelect = document.getElementById('currentLocation');
+            const destinationSelect = document.getElementById('destination');
+    
+            const selectedOptionValue = (locationType === 'currentLocation') ?
+                currentLocationSelect.value :
+                destinationSelect.value;
+    
+            if (locationType === 'currentLocation') {
+                destinationSelect.querySelectorAll('option').forEach(option => {
+                    if (option.value === selectedOptionValue) {
+                        option.disabled = true;
+                    } else {
+                        option.disabled = false;
+                    }
+                });
+            } else {
+                currentLocationSelect.querySelectorAll('option').forEach(option => {
+                    if (option.value === selectedOptionValue) {
+                        option.disabled = true;
+                    } else {
+                        option.disabled = false;
+                    }
+                });
+            }
+        }
+
+
+        

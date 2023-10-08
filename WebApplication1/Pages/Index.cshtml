@@ -372,4 +372,33 @@
 </div>
 
 
-<div id="welcomeMessage" style="display: none;"></div>
+<div>
+    <label for="currentLocation">Where are you:</label>
+    <select id="currentLocation" onchange="disableSelectedLocation('currentLocation')">
+        <option value="" disabled selected>Select your current location</option>
+        <option value="Earth">Earth</option>
+        <option value="Mars">Mars</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Mercury">Mercury</option>
+        <option value="Venus">Venus</option>
+        <option value="Uranus">Uranus</option>
+        <option value="Neptune">Neptune</option>
+    </select>
+</div>
+
+<div>
+    <label for="destination">Where do you want to go:</label>
+    <select id="destination" onchange="disableSelectedLocation('destination')">
+        <option value="" disabled selected>Select your destination</option>
+        <option value="Earth">Earth</option>
+        <option value="Mars">Mars</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Mercury">Mercury</option>
+        <option value="Venus">Venus</option>
+        <option value="Uranus">Uranus</option>
+        <option value="Neptune">Neptune</option>
+    </select>
+</div>
+
