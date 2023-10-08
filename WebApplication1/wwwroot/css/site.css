@@ -5,6 +5,7 @@ body {
     font-weight: 500;
 }
 
+
 .navbar {
     background-color: #0A0A0A;
 }
@@ -72,6 +73,7 @@ body {
 }
 
 .planetInfoContainer {
+    width: auto;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -111,9 +113,9 @@ body {
     background-color: #082D6C;
 }
 
-.customerCard{
+.customerCard {
     background-color: var(--blue-variation-main, #0B3D91);
-    padding : 30px;
+    padding: 30px;
 }
 
 /*--------------------------------------*/
@@ -148,3 +150,16 @@ hr {
     font-size: 16px;
 }
 
+
+/*--------------------------------------*/
+
+h3 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.085px;
+}
+
+.destinations-text {
+    letter-spacing: 0.024px;
+
+}
