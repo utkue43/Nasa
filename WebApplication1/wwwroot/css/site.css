@@ -137,6 +137,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.8);
     margin: auto 36px;
 }
+.syj .line{
+    width: 35px;
+}
+.syj p{
+    font-size: 14px;
+    letter-spacing: 0.035px;
+    margin: 12px auto 6px;
+}
 
 h4 {
     font-size: 20px;
@@ -184,4 +192,8 @@ h6{
 .customer-image{
     position: absolute;
     top: -65px;
+}
+
+.syj-check{
+    margin-top: 45px;
 }
