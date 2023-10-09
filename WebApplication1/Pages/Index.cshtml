@@ -302,35 +302,50 @@
                 Your Journey<span class="line"></span></h1>
         </div>
         <div class="col-8">
-            <div class="row pe-5">
+            <div class="row px-3">
                 <div class="col-4">
                     <p>From</p>
-                    <input type="date">
+                    <div class="position-relative">
+                        <input class="date-picker" type="date">
+                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div>
                     <p>Departure</p>
-                    <input type="date">
+                    <div class="position-relative">
+                        <input class="date-picker" type="date">
+                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div>
                 </div>
                 <div class="col-4">
                     <p>To</p>
-                    <input type="date">
+                    <div class="position-relative">
+                        <input class="date-picker" type="date">
+                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div>
                     <p>Return</p>
-                    <input type="date">
+                    <div class="position-relative">
+                        <input class="date-picker" type="date">
+                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div>
                 </div>
                 <div class="col-4">
-                    <p>From</p>
-                    <input type="date">
+                    <p>Where</p>
+                    <div class="position-relative">
+                        <input class="date-picker" type="date">
+                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div>
                     <div class="row syj-check">
                         <div class="col">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <label class="form-check-label ms-2" for="flexCheckDefault">
                                     One-way
                                 </label>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                            <div class="form-check align-items-center">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                                <label class="form-check-label ms-2" for="flexCheckDefault2">
                                     Direct
                                 </label>
                             </div>
@@ -338,8 +353,9 @@
                     </div>
                 </div>
             </div>
+            <button class="btn news-button syj-button mt-5">Search</button>
         </div>
-        <div class="col-4">
+        <div class="col-4 text-end">
             <img src="syj-rocket.png" alt="syj-rocket">
         </div>
     </div>
@@ -442,7 +458,10 @@
 
 <div class="purchase-container">
     <h2>Purchase</h2>
-    <input type="date" id="dateInput">
+    <div class="position-relative">
+        <input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg"
+            alt="down-line"></ position-absolutespan>id="dateInput">
+    </div>
     <button id="buyButton" disabled>Buy</button>
 </div>
 
