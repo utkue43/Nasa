@@ -305,12 +305,8 @@
             <div class="row px-3">
                 <div class="col-4">
                     <p>From</p>
-                    @* <div class="position-relative">
-                    <input class="date-picker" type="date">
-                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div> *@
                     <select id="currentLocation" onchange="disableSelectedLocation('currentLocation')">
-                        
+
                         <option value="Earth">Earth</option>
                         <option value="Mars">Mars</option>
                         <option value="Jupiter">Jupiter</option>
@@ -323,17 +319,13 @@
                     <p>Departure Time</p>
                     <div class="position-relative">
                         <input class="date-picker" type="date">
-                        @* <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span> *@
+                       
                     </div>
                 </div>
                 <div class="col-4">
                     <p>To</p>
-                    @* <div class="position-relative">
-                    <input class="date-picker" type="date">
-                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div> *@
                     <select id="destination" onchange="disableSelectedLocation('destination')">
-                        
+
                         <option value="Earth">Earth</option>
                         <option value="Mars">Mars</option>
                         <option value="Jupiter">Jupiter</option>
@@ -346,26 +338,16 @@
                     <p>Return Time</p>
                     <div class="position-relative">
                         <input class="date-picker" type="date">
-                        @* <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span> *@
                     </div>
                 </div>
                 <div class="col-4">
                     <p>Passenger</p>
-                    @* <div class="position-relative">
-                    <input class="date-picker" type="date">
-                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div> *@
-                    <select id="passenger" onchange="disableSelectedLocation('passenger')">
-                        
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                    </select>
+                    <div class="counter">
+                        <button id="decrement-btn">-</button>
+                        <div id="counter-value">0</div>
+                        <button id="increment-btn">+</button>
+                    </div>
+
                     <div class="row syj-check">
                         <div class="col">
                             <div class="form-check">
@@ -489,14 +471,14 @@
 
 
 
-<div class="purchase-container">
+@* <div class="purchase-container">
     <h2>Purchase</h2>
     <div class="position-relative">
         <input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg" alt="down-line"></
             position-absolutespan>id="dateInput">
     </div>
     <button id="buyButton" disabled>Buy</button>
-</div>
+</div> *@
 
 <div class="purchased-dates-container">
     <h2>Your Purchased Dates</h2>

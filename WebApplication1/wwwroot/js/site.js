@@ -1,25 +1,24 @@
 ﻿
-function increase() {
-    var increases = document.querySelectorAll(".counter");
+// function increase() {
+//     var increases = document.querySelectorAll(".counter");
 
-    for (var i = 0; i < increases.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = increases[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+//     for (var i = 0; i < increases.length; i++) {
+//         var windowHeight = window.innerHeight;
+//         var elementTop = increases[i].getBoundingClientRect().top;
+//         var elementVisible = 150;
 
-        if (elementTop < windowHeight - elementVisible) {
-        console.log("kls");
-            for (var i = 0; i < 500; i++) {
-                document.getElementById("c1").innerHTML = i;
-                setTimeout(0.001);
-            }
-        } else {
-            
-        }
-    }
-}
+//         if (elementTop < windowHeight - elementVisible) {
+//             for (var i = 0; i < 500; i++) {
+//                 document.getElementById("c1").innerHTML = i;
+//                 setTimeout(0.001);
+//             }
+//         } else {
 
-window.addEventListener("scroll", increase);
+//         }
+//     }
+// }
+
+//window.addEventListener("scroll", increase);
 
 
 
@@ -36,7 +35,7 @@ function handleRegisterFormSubmit(event) {
 }
 
 
-let isLoggedIn = false;  
+var isLoggedIn = false;
 
 function handleLoginFormSubmit(event) {
     event.preventDefault();
@@ -46,7 +45,7 @@ function handleLoginFormSubmit(event) {
         password: formData.get('password')
     };
 
-    
+
     fetch('https://localhost:7076/api/User/login', {
         method: 'POST',
         headers: {
@@ -74,7 +73,7 @@ function handleLoginFormSubmit(event) {
         })
         .catch(error => {
             console.error('Error during login:', error.message);
-            alert(error.message); 
+            alert(error.message);
         });
 }
 
@@ -92,7 +91,7 @@ function registerUser(user) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.text();  
+            return response.text();
         })
         .then(data => {
             console.log('Registration response:', data);
@@ -128,12 +127,12 @@ function loginUser(user) {
 }
 
 
-let loggedInUser = null;  
+let loggedInUser = null;
 
 function loginUser(user) {
-    
-    loggedInUser = { nickname: user.username }; 
-    
+
+    loggedInUser = { nickname: user.username };
+
     updateWelcomeMessage();
 }
 
@@ -142,10 +141,10 @@ function updateWelcomeMessage() {
 
     if (loggedInUser) {
         welcomeMessage.textContent = `Welcome, ${loggedInUser.nickname}!`;
-        welcomeMessage.style.display = 'block';  
+        welcomeMessage.style.display = 'block';
     } else {
-        welcomeMessage.textContent = '';  
-        welcomeMessage.style.display = 'none';  
+        welcomeMessage.textContent = '';
+        welcomeMessage.style.display = 'none';
     }
 }
 
@@ -170,75 +169,97 @@ document.getElementById('registerForm').addEventListener('submit', handleRegiste
 
 
 
-const disabledDates = ['2023-10-10', '2023-10-15'];
-        const purchasedDates = [];  
+// const disabledDates = ['2023-10-10', '2023-10-15'];
+// const purchasedDates = [];
 
-        const dateInput = document.getElementById('dateInput');
-        const buyButton = document.getElementById('buyButton');
+// const dateInput = document.getElementById('dateInput');
+// const buyButton = document.getElementById('buyButton');
 
-        function isUserLoggedIn() {
-            
-            
-            return true;  
-        }
+// function isUserLoggedIn() {
 
-        dateInput.addEventListener('input', function () {
-            const selectedDate = this.value;
-            buyButton.disabled = !isLoggedIn || !selectedDate || disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate);
+
+//     return true;
+// }
+
+// dateInput.addEventListener('input', function () {
+//     const selectedDate = this.value;
+//     buyButton.disabled = !isLoggedIn || !selectedDate || disabledDates.includes(selectedDate) || purchasedDates.includes(selectedDate);
+// });
+
+// function updatePurchasedDatesDisplay() {
+//     purchasedDatesList.innerHTML = '';
+
+//     purchasedDates.forEach(date => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = date;
+//         purchasedDatesList.appendChild(listItem);
+//     });
+// }
+
+// buyButton.addEventListener('click', function () {
+//     const selectedDate = dateInput.value;
+
+//     if (isLoggedIn) {
+
+//         alert('Date purchased: ' + selectedDate);
+
+//         purchasedDates.push(selectedDate);
+//         dateInput.value = '';
+//         buyButton.disabled = true;
+//         updatePurchasedDatesDisplay();
+//     } else {
+//         alert('You need to be logged in to buy dates.');
+//     }
+// });
+
+function disableSelectedLocation(locationType) {
+    const currentLocationSelect = document.getElementById('currentLocation');
+    const destinationSelect = document.getElementById('destination');
+
+    const selectedOptionValue = (locationType === 'currentLocation') ?
+        currentLocationSelect.value :
+        destinationSelect.value;
+
+    if (locationType === 'currentLocation') {
+        destinationSelect.querySelectorAll('option').forEach(option => {
+            if (option.value === selectedOptionValue) {
+                option.disabled = true;
+                option.style.color="#808080"
+            } else {
+                option.disabled = false;
+            }
         });
-
-        function updatePurchasedDatesDisplay() {
-            purchasedDatesList.innerHTML = '';  
-    
-            purchasedDates.forEach(date => {
-                const listItem = document.createElement('li');
-                listItem.textContent = date;
-                purchasedDatesList.appendChild(listItem);
-            });
-        }
-    
-        buyButton.addEventListener('click', function () {
-            const selectedDate = dateInput.value;
-    
-            if (isLoggedIn) {
-                
-                alert('Date purchased: ' + selectedDate);
-                
-                purchasedDates.push(selectedDate);
-                dateInput.value = ''; 
-                buyButton.disabled = true; 
-                updatePurchasedDatesDisplay();  
+    } else {
+        currentLocationSelect.querySelectorAll('option').forEach(option => {
+            if (option.value === selectedOptionValue) {
+                option.disabled = true;
+                option.style.color="#808080"
             } else {
-                alert('You need to be logged in to buy dates.');
+                option.disabled = false;
             }
-        });                                                                                     
-
-        function disableSelectedLocation(locationType) {
-            const currentLocationSelect = document.getElementById('currentLocation');
-            const destinationSelect = document.getElementById('destination');
-    
-            const selectedOptionValue = (locationType === 'currentLocation') ?
-                currentLocationSelect.value :
-                destinationSelect.value;
-    
-            if (locationType === 'currentLocation') {
-                destinationSelect.querySelectorAll('option').forEach(option => {
-                    if (option.value === selectedOptionValue) {
-                        option.disabled = true;
-                    } else {
-                        option.disabled = false;
-                    }
-                });
-            } else {
-                currentLocationSelect.querySelectorAll('option').forEach(option => {
-                    if (option.value === selectedOptionValue) {
-                        option.disabled = true;
-                    } else {
-                        option.disabled = false;
-                    }
-                });
-            }
-        }
+        });
+    }
+}
 
 
-        
+
+
+let counter = 0;
+const counterValue = document.getElementById('counter-value');
+const incrementBtn = document.getElementById('increment-btn');
+const decrementBtn = document.getElementById('decrement-btn');
+// To increment the value of counter
+incrementBtn.addEventListener('click', () => {
+    counter++;
+    counterValue.innerHTML = counter;
+});
+
+// To decrement the value of counter
+decrementBtn.addEventListener('click', () => {
+    counter--;
+    if (counter < 0) {
+        counter = 0;
+    }
+
+    counterValue.innerHTML = counter;
+});

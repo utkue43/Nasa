@@ -243,7 +243,7 @@ h6 {
 
 }
 
-select{
+select {
     color: #ffffff;
     display: flex;
     width: 197px;
@@ -256,7 +256,26 @@ select{
     font-size: 13px;
 }
 
-option{
+option {
     width: 197px;
     color: #000000;
+}
+
+.counter{
+    display: flex!important;
+    align-items: center;
+}
+
+#decrement-btn,
+#increment-btn {
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    padding: 12px 20px;
+    color: #ffffff;
+}
+
+#counter-value{
+    font-size: 24px;
+    padding: 0 18px;
 }
