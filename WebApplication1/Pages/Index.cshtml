@@ -305,34 +305,67 @@
             <div class="row px-3">
                 <div class="col-4">
                     <p>From</p>
+                    @* <div class="position-relative">
+                    <input class="date-picker" type="date">
+                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div> *@
+                    <select id="currentLocation" onchange="disableSelectedLocation('currentLocation')">
+                        
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="Neptune">Neptune</option>
+                    </select>
+                    <p>Departure Time</p>
                     <div class="position-relative">
                         <input class="date-picker" type="date">
-                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div>
-                    <p>Departure</p>
-                    <div class="position-relative">
-                        <input class="date-picker" type="date">
-                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                        @* <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span> *@
                     </div>
                 </div>
                 <div class="col-4">
                     <p>To</p>
+                    @* <div class="position-relative">
+                    <input class="date-picker" type="date">
+                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div> *@
+                    <select id="destination" onchange="disableSelectedLocation('destination')">
+                        
+                        <option value="Earth">Earth</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Jupiter">Jupiter</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Mercury">Mercury</option>
+                        <option value="Venus">Venus</option>
+                        <option value="Uranus">Uranus</option>
+                        <option value="Neptune">Neptune</option>
+                    </select>
+                    <p>Return Time</p>
                     <div class="position-relative">
                         <input class="date-picker" type="date">
-                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div>
-                    <p>Return</p>
-                    <div class="position-relative">
-                        <input class="date-picker" type="date">
-                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                        @* <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span> *@
                     </div>
                 </div>
                 <div class="col-4">
-                    <p>Where</p>
-                    <div class="position-relative">
-                        <input class="date-picker" type="date">
-                        <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
-                    </div>
+                    <p>Passenger</p>
+                    @* <div class="position-relative">
+                    <input class="date-picker" type="date">
+                    <span class="down-line position-absolute"><img src="down-line.svg" alt="down-line"></span>
+                    </div> *@
+                    <select id="passenger" onchange="disableSelectedLocation('passenger')">
+                        
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
                     <div class="row syj-check">
                         <div class="col">
                             <div class="form-check">
@@ -459,8 +492,8 @@
 <div class="purchase-container">
     <h2>Purchase</h2>
     <div class="position-relative">
-        <input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg"
-            alt="down-line"></ position-absolutespan>id="dateInput">
+        <input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg" alt="down-line"></
+            position-absolutespan>id="dateInput">
     </div>
     <button id="buyButton" disabled>Buy</button>
 </div>
@@ -473,30 +506,10 @@
 
 <div>
     <label for="currentLocation">Where are you:</label>
-    <select id="currentLocation" onchange="disableSelectedLocation('currentLocation')">
-        <option value="" disabled selected>Select your current location</option>
-        <option value="Earth">Earth</option>
-        <option value="Mars">Mars</option>
-        <option value="Jupiter">Jupiter</option>
-        <option value="Saturn">Saturn</option>
-        <option value="Mercury">Mercury</option>
-        <option value="Venus">Venus</option>
-        <option value="Uranus">Uranus</option>
-        <option value="Neptune">Neptune</option>
-    </select>
+
 </div>
 
 <div>
     <label for="destination">Where do you want to go:</label>
-    <select id="destination" onchange="disableSelectedLocation('destination')">
-        <option value="" disabled selected>Select your destination</option>
-        <option value="Earth">Earth</option>
-        <option value="Mars">Mars</option>
-        <option value="Jupiter">Jupiter</option>
-        <option value="Saturn">Saturn</option>
-        <option value="Mercury">Mercury</option>
-        <option value="Venus">Venus</option>
-        <option value="Uranus">Uranus</option>
-        <option value="Neptune">Neptune</option>
-    </select>
+
 </div>
