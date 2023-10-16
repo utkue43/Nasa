@@ -60,7 +60,7 @@
 
 <div class="container w-auto">
     <div class="row text-center">
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 d-flex justify-content-center">
             <h1 class="features-header d-flex align-items-center justify-content-center"><span
                     class="line"></span>Features<span class="line"></span></h1>
         </div>
@@ -126,8 +126,8 @@
 
 
 <div class="container planetInfoContainer">
-    <div class="row ">
-        <div class="col-12 my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 my-5 d-flex justify-content-center">
             <h1 class="features-header d-flex align-items-center justify-content-center"><span
                     class="line"></span>Destinations<span class="line"></span></h1>
         </div>
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -214,7 +214,7 @@
         </div>
 
 
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -232,7 +232,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -252,7 +252,7 @@
             </div>
         </div>
 
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -273,7 +273,7 @@
             </div>
         </div>
 
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 collapse" id="collapseExample">
             <div class="row px-5">
 
 
@@ -291,13 +291,17 @@
                 </div>
             </div>
         </div>
+        <button class="btn news-button w-25" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            See More
+        </button>
     </div>
 </div>
 
 
 <div class="container syj w-auto">
     <div class="row">
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 d-flex justify-content-center">
             <h1 class="features-header d-flex align-items-center justify-content-center"><span class="line"></span>Start
                 Your Journey<span class="line"></span></h1>
         </div>
@@ -319,7 +323,7 @@
                     <p>Departure Time</p>
                     <div class="position-relative">
                         <input class="date-picker" type="date">
-                       
+
                     </div>
                 </div>
                 <div class="col-4">
@@ -380,7 +384,7 @@
 
 <div class="container w-auto">
     <div class="row">
-        <div class="col-12 my-5">
+        <div class="col-12 my-5 d-flex justify-content-center">
             <h1 class="features-header d-flex align-items-center justify-content-center"><span
                     class="line"></span>Customers<span class="line"></span></h1>
         </div>
@@ -433,13 +437,98 @@
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 my-5">
+<div class="container w-auto">
+    <div class="row justify-content-center">
+        <div class="col-12 my-3 d-flex justify-content-center">
             <h1 class="features-header d-flex align-items-center justify-content-center"><span
                     class="line"></span>FAQ<span class="line"></span></h1>
         </div>
-
+        <div class="accordion" id="accordionExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header"> 
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1">
+                        What destinations does NSP offer for space tourism adventures?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        <hr>
+                        NSP offers a range of destinations, including Mercury, Venus, Mars, Jupiter, Saturn,
+                        Uranus, Neptune, and even Earth for extraordinary travel experiences.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample2">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                        aria-expanded="false" aria-controls="collapse2">
+                        What kind of accommodations can I expect during my space tourism journey?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        <hr>
+                        Accommodations vary by destination but are designed for comfort and safety, from
+                        climate-controlled suits on hot planets to well-furnished research facilities on others.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample3">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                        aria-expanded="false" aria-controls="collapse3">
+                        How do you ensure the safety of travelers during these space adventures?
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                    <div class="accordion-body">
+                        <hr>
+                        NSP places a premium on safety, providing advanced spacesuits, cutting-edge technology,
+                        and highly trained guides to ensure the well-being of all travelers.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample4">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                        aria-expanded="false" aria-controls="collapse4">
+                        Can I book a space adventure for a specific duration, or are there fixed trip lengths?
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample4">
+                    <div class="accordion-body">
+                        <hr>
+                        You can customize the duration of your adventure with NSP, whether you prefer a brief
+                        excursion or an extended stay to explore the wonders of your chosen destination.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample5">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                        aria-expanded="false" aria-controls="collapse5">
+                        How can I join an NSP space tourism adventure, and what are the prerequisites?
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample5">
+                    <div class="accordion-body">
+                        <hr>
+                        Joining NSP is easy! Visit our website, explore available journeys, and book your
+                        adventure. Prerequisites may vary by destination, so check the specific requirements for
+                        each trip.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -472,12 +561,12 @@
 
 
 @* <div class="purchase-container">
-    <h2>Purchase</h2>
-    <div class="position-relative">
-        <input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg" alt="down-line"></
-            position-absolutespan>id="dateInput">
-    </div>
-    <button id="buyButton" disabled>Buy</button>
+<h2>Purchase</h2>
+<div class="position-relative">
+<input class="date-picker" type="date" <span class="down-line"><img src="down-line.svg" alt="down-line"></
+position-absolutespan>id="dateInput">
+</div>
+<button id="buyButton" disabled>Buy</button>
 </div> *@
 
 <div class="purchased-dates-container">
@@ -486,12 +575,12 @@
 </div>
 
 
-<div>
-    <label for="currentLocation">Where are you:</label>
+@* <div>
+<label for="currentLocation">Where are you:</label>
 
 </div>
 
 <div>
-    <label for="destination">Where do you want to go:</label>
+<label for="destination">Where do you want to go:</label>
 
-</div>
+</div> *@
