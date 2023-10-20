@@ -66,6 +66,10 @@ body {
     background-color: #1E5EC9;
 }
 
+.col-3 .card:hover {
+    box-shadow: 0px 8px 20px 0px rgba(30, 94, 201, 0.20), 0px -8px 20px 0px rgba(30, 94, 201, 0.20);
+}
+
 .col-4 .card {
     height: auto;
 }
@@ -291,30 +295,44 @@ option {
     margin: 12px 0px;
     --bs-accordion-color: #fff;
     --bs-accordion-bg: #0A0A0A;
-    /* --bs-accordion-btn-focus-box-shadow:none; */
+    --bs-accordion-btn-focus-box-shadow: none;
     --bs-accordion-btn-color: #fff;
 
 }
 
+.accordion-item {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px !important;
+}
 
-.accordion-header {}
 
 .accordion-button {
     font-size: 24px;
     padding: 24px;
-
 }
 
 .accordion-body {
-    padding-top: 0px;
+    padding: 0px 24px 24px;
+    letter-spacing: 0.08px;
 }
 
-.accordion-body hr{
+.accordion-body hr {
     margin: 0px 0px 24px;
 }
-/* 
+
 .accordion-button:not(.collapsed) {
-    background-color: #0A0A0A;
-    color: #ffffff;
-    box-shadow: none;
-} */
+    color: #fff;
+    background-color: initial;
+    box-shadow: initial;
+}
+
+.accordion-button::after {
+    width: 40px;
+    height: 40px;
+    background-image: url(../down-line.svg);
+    background-size: cover;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../down-line.svg);
+}
