@@ -336,3 +336,7 @@ option {
 .accordion-button:not(.collapsed)::after {
     background-image: url(../down-line.svg);
 }
+
+footer{
+    background-color: #0A0A0A;
+}
